@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gizem Akkaya - Kişisel Web Sitesi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f5f7fa, #e4ecf1);
+      color: #333;
+    }
+    nav {
+      background-color: #0a1f44;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+    nav ul li a:hover {
+      color: #00bcd4;
+    }
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #0f3057, #00587a);
+      color: white;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.4rem;
+      font-style: italic;
+    }
+    .tab-content {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .tabs button {
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #007acc;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .tabs button.active {
+      background-color: #005a9e;
+    }
+    .section {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    .section.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    h2 {
+      color: #0a1f44;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .about-container {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .about-container img {
+      width: 220px;
+      border-radius: 16px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+      background-color: #0a1f44;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Anasayfa</a></li>
+      <li><a href="#tabs">Sekmeler</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Gizem Akkaya</h1>
+    <p>Kodlamayı seven, yaratıcı bir bilgisayar mühendisi adayı</p>
+  </header>
+
+  <div class="tab-content" id="tabs">
+    <div class="tabs">
+      <button onclick="openTab('hakkimda')" class="active">Hakkımda</button>
+      <button onclick="openTab('projeler')">Projeler</button>
+      <button onclick="openTab('yetenekler')">Yetenekler</button>
+      <button onclick="openTab('iletisim')">İletişim</button>
+      <button onclick="openTab('blog')">Mini Blog</button>
+    </div>
+
+    <div id="hakkimda" class="section active">
+      <h2>Hakkımda</h2>
+      <div class="about-container">
+        <img src="malgizem.jpeg" alt="Gizem Akkaya">
+        <p>
+          Merhaba! Ben Gizem Akkaya. Karabük Üniversitesi Bilgisayar Mühendisliği 2. sınıf öğrencisiyim. Yazılım geliştirme, algoritmalar ve yeni teknolojiler konusunda büyük bir tutkum var. Kendimi sürekli geliştirmeye çalışıyor, hem ekip içinde çalışmaya hem de bireysel projeler üretmeye önem veriyorum. Problem çözme becerilerim ve detaylara olan ilgimle, teknoloji dünyasında fark yaratmayı hedefliyorum.
+        </p>
+      </div>
+    </div>
+
+    <div id="projeler" class="section">
+      <h2>Projeler</h2>
+      <ul>
+        <li><strong>Hesap Makinesi</strong> — Java ile temel işlemler yapan masaüstü uygulama</li>
+        <li><strong>Kütüphane Sistemi</strong> — Python + MySQL ile kitap ödünç/iadeleri yönetir</li>
+        <li><strong>Web Portföy</strong> — HTML & CSS ile kişisel portföy sayfası</li>
+        <li><strong>Algoritma Görselleştirici</strong> — Python ile görsel algoritma animasyonları</li>
+        <li><strong>CV Oluşturucu</strong> — HTML ile tasarlanmış sade ve etkili bir özgeçmiş sayfası</li>
+      </ul>
+    </div>
+
+    <div id="yetenekler" class="section">
+      <h2>Teknik Yetenekler & Eğitim</h2>
+      <p><strong>Programlama Dilleri:</strong> C, C++, JavaScript, HTML, PHP</p>
+      <p><strong>Sertifikalar:</strong> Udemy C Programlama Eğitimi, Udemy Python Eğitimi</p>
+      <p><strong>İlgi Alanları:</strong> Yapay zeka, veri yapıları, algoritmalar, web geliştirme, makine öğrenmesi ve problem çözme teknikleri</p>
+      <p><strong>Staj:</strong> Sistaş Bilgi Teknolojileri</p>
+      <p><strong>Hedef:</strong> Yazılım dünyasında güçlü temellere sahip, yenilikçi çözümler üretebilen ve sektöre değer katabilen bir bilgisayar mühendisi olmak.</p>
+    </div>
+
+    <div id="iletisim" class="section">
+      <h2>İletişim</h2>
+      <p>Bana ulaşabileceğin bağlantılar:</p>
+      <ul>
+        <li><a href="mailto:gizemakkaya1801@gmail.com">gizemakkaya1801@gmail.com</a></li>
+        <li><a href="https://github.com/gizemakkaya" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/gizemakkaya" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <div id="blog" class="section">
+      <h2>Mini Blog</h2>
+      <h3>🧠 Algoritmalarla Dans Etmek</h3>
+      <p>Algoritmalar, yazılım dünyasının temel taşlarıdır. Her biri, bir problemi çözmek için düşünülmüş adımlardır. Kod yazarken sadece çalışmasını değil, neden ve nasıl çalıştığını anlamaya çalışırım.</p>
+
+      <h3>🚀 İlk Staj Deneyimim</h3>
+      <p>Sistaş'taki stajım, profesyonel yazılım geliştirme süreçlerini yerinde gözlemlememi sağladı. Takım çalışması, kod kalitesi ve versiyon kontrolü gibi konularda çok şey öğrendim.</p>
+
+      <h3>🌱 Kendimi Geliştirme Yolculuğu</h3>
+      <p>Her gün yeni bir şey öğrenmeye çalışıyorum. Online kurslarla teknik bilgilerimi derinleştiriyor, projelerle uygulamalı deneyim kazanıyorum. Bu yolculukta öğrenmek asla bitmiyor.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Gizem Akkaya | Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script>
+    function openTab(tabId) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.tabs button').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
